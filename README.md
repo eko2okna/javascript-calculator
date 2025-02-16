@@ -13,6 +13,6 @@ A simple calculator built using HTML, CSS and JavaScript
 
 ## Demo
 
-[![View site - GH Pages](https://siemanko.bieda.it/kalkulator-prosty/)
+[![View my site](https://siemanko.bieda.it/kalkulator-prosty/)
 
 ![javascript-calculator](https://github.com/user-attachments/assets/9cef7fee-7070-4c69-bb41-38758700b744)
