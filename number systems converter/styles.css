@@ -1,0 +1,203 @@
+/* Reset stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #6a0dad, #9b59b6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Styl nagłówka */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Nawigacja */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 12px;
+    transition: 0.3s;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+}
+
+/* Kalkulator */
+#kontener {
+    max-width: 40%;
+    margin: 100px auto 20px;
+    background-color: #5e2a8c;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Stylizacja dla pól tekstowych */
+.input-headline {
+    font-size: 1.2rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #8e44ad;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Stopka */
+footer {
+    background: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #4caf50;
+}
+
+/* ================== DODANE STYLE DLA MENU HAMBURGERA ================= */
+/* Stylowanie przycisku hamburgera */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+/* MEDIA QUERIES - wersja mobilna */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        text-align: end;
+    }
+
+    #menu {
+        display: none;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* Stylowanie elementów dropdown na małych ekranach */
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        top: 100%;
+        left: 0;
+        min-width: 160px;
+        border-radius: 5px;
+        z-index: 200;
+    }
+    
+    /* Pokaż menu, gdy ma klasę 'active' */
+    .dropdown-menu.active {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    #kontener {
+        max-width: 90%;
+        padding: 15px;
+        margin-top: 50px;
+    }
+
+    input[type="text"] {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}

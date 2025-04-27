@@ -1,0 +1,274 @@
+/* Reset stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a0dad, #9b59b6);
+    color: #fff;
+    display: flex; /* Ustawienie flexboxa na body */
+    flex-direction: column; /* Układ pionowy */
+    min-height: 100vh; /* Minimalna wysokość strony to 100% wysokości widoku */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styl nagłówka */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Nawigacja */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 12px;
+    transition: 0.3s;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+}
+
+/* Kalkulator */
+#kontener {
+    max-width: 500px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; /* Zmniejszony margines dolny */
+    background-color: #5e2a8c;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #7f3fbf;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+td {
+    text-align: center;
+    padding: 2px;
+    width: 25%; /* Każda komórka ma taką samą szerokość */
+}
+
+/* Przycisk */
+button {
+    width: 100%;
+    height: 60px;
+    background-color: #8e44ad;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; /* Pogrubienie cyfr dla lepszej czytelności */
+}
+
+button:hover {
+    background-color: #9b59b6;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Style dla cyfr */
+.cyfry {
+    background-color: #9b59b6;
+    font-size: 1.2rem; /* Wymuszenie tego samego rozmiaru czcionki */
+}
+
+.cyfry:hover {
+    background-color: #8e44ad;
+}
+
+/* Stylizacja dla pól tekstowych */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #8e44ad;
+    border: none;
+    color: white;
+    text-align: right;
+    font-size: 2rem;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:disabled {
+    background-color: #6a0dad;
+    height: 5px;
+    font-size: 1rem;
+}
+
+/* Stopka */
+footer {
+    background: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #4caf50;
+}
+
+/* ================== DODANE STYLE DLA MENU HAMBURGERA ================= */
+/* Stylowanie przycisku hamburgera */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+/* MEDIA QUERIES - wersja mobilna */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        text-align: end;
+    }
+
+    #menu {
+        display: none;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* Stylowanie elementów dropdown na małych ekranach */
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.9);
+        top: 100%;
+        left: 0;
+        min-width: 160px;
+        border-radius: 5px;
+        z-index: 200;
+    }
+    
+    /* Pokaż menu, gdy ma klasę 'active' */
+    .dropdown-menu.active {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    #kontener {
+        max-width: 90%;
+        padding: 15px;
+        margin-top: 50px;
+    }
+
+    /* Przyciski */
+    button {
+        height: 50px; /* Mniejsza wysokość przycisków */
+        font-size: 1rem; /* Mniejszy rozmiar czcionki */
+    }
+
+    /* Pole tekstowe */
+    input[type="text"] {
+        font-size: 1.5rem; /* Mniejszy rozmiar czcionki */
+        padding: 10px; /* Mniejszy padding */
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
