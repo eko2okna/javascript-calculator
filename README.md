@@ -1,5 +1,5 @@
-<a class="github-button" href="https://github.com/eko2okna" data-size="large" data-show-count="true" aria-label="Follow @eko2okna on GitHub">Follow @eko2okna</a>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+[![Follow @eko2okna on GitHub](https://img.shields.io/github/followers/eko2okna?label=Follow&style=social)](https://github.com/eko2okna)
+
 
 
 # javascript-calculator
