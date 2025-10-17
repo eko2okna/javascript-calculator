@@ -1,4 +1,6 @@
-[!(https://ghbtns.com/github-btn.html?user=eko2okna&type=follow&count=true&size=large)]
+<a class="github-button" href="https://github.com/eko2okna" data-size="large" data-show-count="true" aria-label="Follow @eko2okna on GitHub">Follow @eko2okna</a>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
 
 # javascript-calculator
 A simple calculator built using HTML, CSS and JavaScript
