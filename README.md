@@ -15,7 +15,7 @@ A simple calculator built using HTML, CSS and JavaScript
 
 - Pressing ± after entering the number will change the number to negative one.
 
-## Demo [[Static Badge](https://img.shields.io/badge/Check-here-blue)](https://eko2okna.github.io/javascript-calculator/Calculator/)
+## Demo [![Static Badge](https://img.shields.io/badge/Check-here-blue)](https://eko2okna.github.io/javascript-calculator/Calculator/)
 
 ![javascript-calculator](https://github.com/user-attachments/assets/9cef7fee-7070-4c69-bb41-38758700b744)
 
