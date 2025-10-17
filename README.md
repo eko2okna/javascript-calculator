@@ -1,4 +1,4 @@
-[<iframe src="https://ghbtns.com/github-btn.html?user=eko2okna&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>]
+[!(https://ghbtns.com/github-btn.html?user=eko2okna&type=follow&count=true&size=large)]
 
 # javascript-calculator
 A simple calculator built using HTML, CSS and JavaScript
